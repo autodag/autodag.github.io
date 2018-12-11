@@ -1,0 +1,44 @@
+<title>DAG Files Creator</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="jquery-3.2.1.min.js"></script>
+<script src="bootstable.min.js"></script>
+
+<div style="width:70%; margin: auto;">
+<h1>DAG Files Creator</h1>
+  <div id="dvData">
+      <span style="float:right"><button id="but_add" class="btn btn-sm btn-default">Add New Row</button></span>
+    <table class="table" id="makeEditable">
+      <thead>
+        <tr>
+          <th>Parent Task</th>
+          <th>Child Task</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+  <table class="table" >
+      <tr><td>Start Date:</td>
+          <td>
+              <input class="form-control input-sm" type="datetime-local" id="inputStartDate"></input>
+          </td>
+      </tr>
+      <tr><td>Path:</td>
+          <td>
+              <input class="form-control input-sm" type="text" id="inputPath"></input>
+          </td>
+      </tr>
+  </table>
+  <a href="#" class="export">Save setup files</a>
+</div>
+
+<script>
+ $('#makeEditable').SetEditable({ $addButton: $('#but_add')});
+</script>
+<script>
+ jQuery(function(){
+  jQuery('#but_add').click();
+ });
+</script>
